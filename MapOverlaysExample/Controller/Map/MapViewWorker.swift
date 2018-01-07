@@ -43,6 +43,7 @@ extension MapViewWorker: ParsedDataLoading {
 
 extension MapViewWorker: MapDataProcessing {
     // Find nearest location to the coordinate
+    // https://stackoverflow.com/questions/28023272/find-nearest-point-in-polyline-path
     func findNearestLocation(to coordinate: CLLocationCoordinate2D,
                                              areas: [MapPolygon],
                                              completion: (CLLocationCoordinate2D, [CLLocationCoordinate2D]) -> Void) {
