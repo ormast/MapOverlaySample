@@ -87,4 +87,24 @@ extension MapViewWorker: MapDataProcessing {
         }
         return false
     }
+    
+    // 2 Not used in the sample
+    func containsPoint(in polygon: [CGPoint], point: CGPoint) -> Bool {
+        if polygon.count <= 1 {
+            return false
+        }
+        
+        let p = UIBezierPath()
+        let firstPoint = polygon[0] as CGPoint
+        
+        p.move(to: firstPoint)
+        
+        for index in 1...polygon.count-1 {
+            p.addLine(to: polygon[index] as CGPoint)
+        }
+        
+        p.close()
+        
+        return p.contains(point)
+    }
 }

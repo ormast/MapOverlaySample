@@ -7,7 +7,7 @@ A sample to experiment with:
 
 For detection if a point located inside/outside area, the builtin  CGPath.contains(CGPoint) function was used.
 Other algorithms  to check
-1. Ray casting
+1. Ray casting, With BezierPath, WRF
 
 The sample provide an option to load KML data by selecting 3 different files in kml format
 1. Allowed area
@@ -28,5 +28,6 @@ Research resources:
 - https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment/11172574#11172574
 - http://alienryderflex.com/polygon/
 - https://gis.stackexchange.com/questions/16414/point-in-polygon-algorithm-for-multiple-polygons
+https://wrf.ecse.rpi.edu//Research/Short_Notes/pnpoly.html
 
 Developed using Xcode 9.1, iOS 10.3, swift 3.2
