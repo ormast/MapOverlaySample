@@ -12,6 +12,7 @@
 		6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAB20000A10001CBD66 /* Assets.xcassets */; };
 		6C53EBAF20000A10001CBD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAD20000A10001CBD66 /* LaunchScreen.storyboard */; };
 		6C950BA52000163D0087A8C4 /* KMLListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C950BA42000163D0087A8C4 /* KMLListViewController.swift */; };
+		6CC293242001BEA80081AD8B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6CC293232001BEA80081AD8B /* README.md */; };
 		6CF2F9422000225500FAF27E /* MapViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F9412000225500FAF27E /* MapViewWorker.swift */; };
 		6CF2F9492000266700FAF27E /* Allowed_area.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F9462000266700FAF27E /* Allowed_area.kml */; };
 		6CF2F94D200026AC00FAF27E /* Multiple_areas.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */; };
@@ -29,6 +30,7 @@
 		6C53EBAE20000A10001CBD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C53EBB020000A10001CBD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C950BA42000163D0087A8C4 /* KMLListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLListViewController.swift; sourceTree = "<group>"; };
+		6CC293232001BEA80081AD8B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6CF2F9412000225500FAF27E /* MapViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWorker.swift; sourceTree = "<group>"; };
 		6CF2F9462000266700FAF27E /* Allowed_area.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Allowed_area.kml; sourceTree = "<group>"; };
 		6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Multiple_areas.kml; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				6C53EBB620000A96001CBD66 /* Controller */,
 				6C53EBA420000A10001CBD66 /* AppDelegate.swift */,
 				6CF2F9522001205100FAF27E /* Utilites.swift */,
+				6CC293232001BEA80081AD8B /* README.md */,
 			);
 			path = MapOverlaysExample;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC293242001BEA80081AD8B /* README.md in Resources */,
 				6C53EBAF20000A10001CBD66 /* LaunchScreen.storyboard in Resources */,
 				6CF2F9492000266700FAF27E /* Allowed_area.kml in Resources */,
 				6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */,
