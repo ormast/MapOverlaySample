@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		6C53EBA520000A10001CBD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53EBA420000A10001CBD66 /* AppDelegate.swift */; };
-		6C53EBA720000A10001CBD66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53EBA620000A10001CBD66 /* ViewController.swift */; };
-		6C53EBAA20000A10001CBD66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBA820000A10001CBD66 /* Main.storyboard */; };
+		6C53EBA720000A10001CBD66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53EBA620000A10001CBD66 /* MapViewController.swift */; };
 		6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAB20000A10001CBD66 /* Assets.xcassets */; };
 		6C53EBAF20000A10001CBD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAD20000A10001CBD66 /* LaunchScreen.storyboard */; };
+		6C950BA52000163D0087A8C4 /* KMLListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C950BA42000163D0087A8C4 /* KMLListViewController.swift */; };
+		6CF2F9422000225500FAF27E /* MapViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F9412000225500FAF27E /* MapViewWorker.swift */; };
+		6CF2F9492000266700FAF27E /* Allowed_area.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F9462000266700FAF27E /* Allowed_area.kml */; };
+		6CF2F94D200026AC00FAF27E /* Multiple_areas.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */; };
+		6CF2F94E200026AC00FAF27E /* Bad_example.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F94C200026AC00FAF27E /* Bad_example.kml */; };
+		6CF2F950200026F000FAF27E /* KMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F94F200026F000FAF27E /* KMLParser.swift */; };
+		6CF2F9532001205100FAF27E /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F9522001205100FAF27E /* Utilites.swift */; };
+		6CF2F955200128D700FAF27E /* MapPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F954200128D700FAF27E /* MapPolygon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C53EBA120000A10001CBD66 /* MapOverlaysExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapOverlaysExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C53EBA420000A10001CBD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C53EBA620000A10001CBD66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6C53EBA920000A10001CBD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C53EBA620000A10001CBD66 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C53EBAB20000A10001CBD66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C53EBAE20000A10001CBD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C53EBB020000A10001CBD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C950BA42000163D0087A8C4 /* KMLListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLListViewController.swift; sourceTree = "<group>"; };
+		6CF2F9412000225500FAF27E /* MapViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWorker.swift; sourceTree = "<group>"; };
+		6CF2F9462000266700FAF27E /* Allowed_area.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Allowed_area.kml; sourceTree = "<group>"; };
+		6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Multiple_areas.kml; sourceTree = "<group>"; };
+		6CF2F94C200026AC00FAF27E /* Bad_example.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Bad_example.kml; sourceTree = "<group>"; };
+		6CF2F94F200026F000FAF27E /* KMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMLParser.swift; sourceTree = "<group>"; };
+		6CF2F9522001205100FAF27E /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
+		6CF2F954200128D700FAF27E /* MapPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPolygon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,69 @@
 		6C53EBA320000A10001CBD66 /* MapOverlaysExample */ = {
 			isa = PBXGroup;
 			children = (
+				6CF2F951200028A600FAF27E /* Resources */,
+				6C950BA3200013210087A8C4 /* Service */,
+				6C950BA2200013190087A8C4 /* Model */,
+				6C53EBB620000A96001CBD66 /* Controller */,
 				6C53EBA420000A10001CBD66 /* AppDelegate.swift */,
-				6C53EBA620000A10001CBD66 /* ViewController.swift */,
-				6C53EBA820000A10001CBD66 /* Main.storyboard */,
+				6CF2F9522001205100FAF27E /* Utilites.swift */,
+			);
+			path = MapOverlaysExample;
+			sourceTree = "<group>";
+		};
+		6C53EBB620000A96001CBD66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2F9402000223500FAF27E /* Map */,
+				6C950BA42000163D0087A8C4 /* KMLListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C950BA2200013190087A8C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2F954200128D700FAF27E /* MapPolygon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C950BA3200013210087A8C4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2F94F200026F000FAF27E /* KMLParser.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6CF2F9402000223500FAF27E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6C53EBA620000A10001CBD66 /* MapViewController.swift */,
+				6CF2F9412000225500FAF27E /* MapViewWorker.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		6CF2F9442000264000FAF27E /* kml */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2F94C200026AC00FAF27E /* Bad_example.kml */,
+				6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */,
+				6CF2F9462000266700FAF27E /* Allowed_area.kml */,
+			);
+			path = kml;
+			sourceTree = "<group>";
+		};
+		6CF2F951200028A600FAF27E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CF2F9442000264000FAF27E /* kml */,
 				6C53EBAB20000A10001CBD66 /* Assets.xcassets */,
 				6C53EBAD20000A10001CBD66 /* LaunchScreen.storyboard */,
 				6C53EBB020000A10001CBD66 /* Info.plist */,
 			);
-			path = MapOverlaysExample;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C53EBAF20000A10001CBD66 /* LaunchScreen.storyboard in Resources */,
+				6CF2F9492000266700FAF27E /* Allowed_area.kml in Resources */,
 				6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */,
-				6C53EBAA20000A10001CBD66 /* Main.storyboard in Resources */,
+				6CF2F94D200026AC00FAF27E /* Multiple_areas.kml in Resources */,
+				6CF2F94E200026AC00FAF27E /* Bad_example.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C53EBA720000A10001CBD66 /* ViewController.swift in Sources */,
+				6C53EBA720000A10001CBD66 /* MapViewController.swift in Sources */,
+				6CF2F9532001205100FAF27E /* Utilites.swift in Sources */,
+				6CF2F955200128D700FAF27E /* MapPolygon.swift in Sources */,
+				6CF2F9422000225500FAF27E /* MapViewWorker.swift in Sources */,
+				6CF2F950200026F000FAF27E /* KMLParser.swift in Sources */,
+				6C950BA52000163D0087A8C4 /* KMLListViewController.swift in Sources */,
 				6C53EBA520000A10001CBD66 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +220,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6C53EBA820000A10001CBD66 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C53EBA920000A10001CBD66 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6C53EBAD20000A10001CBD66 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,10 +344,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MapOverlaysExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orma.MapOverlaysExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -290,10 +359,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MapOverlaysExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orma.MapOverlaysExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
