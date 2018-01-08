@@ -21,8 +21,8 @@ class KMLListViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         
-        filesTitles = ["Allowed Area", "Bad example", "Multiple"]
-        filesNames = ["Allowed_area", "Bad_example", "Multiple_areas"]
+        filesTitles = ["Allowed Area", "Bad example", "Multiple", "With Holes"]
+        filesNames = ["Allowed_area", "Bad_example", "Multiple_areas", "With_holes"]
         
         tableView.delegate = self
         tableView.dataSource = self

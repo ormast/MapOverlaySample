@@ -17,7 +17,7 @@ protocol MapDataProcessing {
     func findNearestLocation(to coordinate: CLLocationCoordinate2D,
                                 areas: [MapPolygon],
                                 completion: (CLLocationCoordinate2D, [CLLocationCoordinate2D]) -> Void)
-    func locationIsInside(location: CLLocationCoordinate2D, areas: [MapPolygon]) -> Bool
+    func locationIsInsideRegion(location: CLLocationCoordinate2D, areas: [MapPolygon], completion: @escaping (Result<MapPolygon>) -> Void)
 }
 
 class MapViewWorker {
@@ -79,32 +79,31 @@ extension MapViewWorker: MapDataProcessing {
         completion(bestLocation, bestSegmentCoordinates)
     }
     
-    // Check if the location is inside or outside of the areas
-    func locationIsInside(location: CLLocationCoordinate2D, areas: [MapPolygon]) -> Bool {
-        for polygon in areas {
-            let result = polygon.area.contains(coordinate: location)
-            if result == true { return true }
-        }
-        return false
-    }
-    
-    // 2 Not used in the sample
-    func containsPoint(in polygon: [CGPoint], point: CGPoint) -> Bool {
-        if polygon.count <= 1 {
-            return false
+    func locationIsInsideRegion(location: CLLocationCoordinate2D, areas: [MapPolygon], completion: @escaping (Result<MapPolygon>) -> Void) {
+        
+        if areas.count == 0 {
+            completion(Result.noResult)
+            return
         }
         
-        let p = UIBezierPath()
-        let firstPoint = polygon[0] as CGPoint
-        
-        p.move(to: firstPoint)
-        
-        for index in 1...polygon.count-1 {
-            p.addLine(to: polygon[index] as CGPoint)
+        for area in areas {
+            let found = Algorithm.locationInRegionRayCast(location: location, area: area.areaCoordinates)
+            if found == true {
+                if let insideArea = area.area.interiorPolygons, insideArea.count > 0 {
+                    for subArea in insideArea {
+                        let foundInSubArea = Algorithm.locationInRegionRayCast(location: location, area: subArea.getCoordinatesArray())
+                        if foundInSubArea == true {
+                            let subArea = MapPolygon(polygon: subArea)
+                            completion(Result.insideRegionInsideSubArea(subArea))
+                            return
+                        }
+                    }
+                }
+
+                completion(Result.insideRegion(area))
+                return
+            }
         }
-        
-        p.close()
-        
-        return p.contains(point)
+        completion(Result.outsideRegion)
     }
 }

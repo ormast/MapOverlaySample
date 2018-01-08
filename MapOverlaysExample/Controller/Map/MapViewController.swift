@@ -15,6 +15,13 @@ enum PinColorState: String {
     case near = "Orange"
 }
 
+enum Result<T> {
+    case insideRegion(T)
+    case insideRegionInsideSubArea(T)
+    case outsideRegion
+    case noResult
+}
+
 class MapViewController: UIViewController {
     
     // Distance label
@@ -43,6 +50,7 @@ class MapViewController: UIViewController {
     
     // Array of map polygons
     var mapPolygons = [MapPolygon]()
+    var mapInteriorPolygons = [MapPolygon]()
     
     // Lifecycle
     override func viewDidLoad() {
@@ -68,11 +76,22 @@ class MapViewController: UIViewController {
                 DispatchQueue.global().async {
                     
                     self.mapPolygons = []
+                    self.mapInteriorPolygons = []
                     
                     for overlay in overlays {
                         if let polygon = overlay as? MKPolygon {
                             let newPolygon = MapPolygon(polygon: polygon)
                             self.mapPolygons.append(newPolygon)
+                            
+                            // Check for interior polygons
+                            if let interiors = polygon.interiorPolygons {
+                                if interiors.count > 0 {
+                                    for interior in interiors {
+                                        let inPoly = MapPolygon(polygon: interior)
+                                        self.mapInteriorPolygons.append(inPoly)
+                                    }
+                                }
+                            }
                         }
                     }
                     
@@ -175,17 +194,33 @@ extension MapViewController {
         let locationCoord = self.mapView.convert(touchedLocation, toCoordinateFrom: self.mapView)
         tappedLocation.coordinate = locationCoord
         
-        // Check if the location pin is placed inside some polygon area
-        let isLocationInsideArea = worker.locationIsInside(location: locationCoord, areas: self.mapPolygons)
-        if isLocationInsideArea == true {
-            // Pin is inside in some polygon area. Place the red pin
-            tappedLocation.title = PinColorState.inside.rawValue
-            self.mapView.addAnnotation(self.tappedLocation)
-            return
+        worker.locationIsInsideRegion(location: locationCoord, areas: self.mapPolygons) {
+            [weak self] (result: Result<MapPolygon>) in
+            
+            guard let sself = self else { return }
+            
+            switch result {
+            case .insideRegion(_):
+                // Pin is inside. Place the red pin
+                sself.tappedLocation.title = PinColorState.inside.rawValue
+                sself.mapView.addAnnotation(sself.tappedLocation)
+                break
+            case .outsideRegion:
+                // The pin located outside a polygon areas. Find the nearest polygon segment location to the pin
+                sself.findNearestLocation(to: locationCoord, areas: sself.mapPolygons)
+                break
+            case .insideRegionInsideSubArea(let mapPolygon):
+                 // The pin located inside a specific polygon area (hole). Find the nearest location on segment to the pin
+                sself.findNearestLocation(to: locationCoord, areas: [mapPolygon])
+                break
+            case .noResult:
+                break
+            }
         }
-
-        // The pin located outside a polygon areas. Find the nearest polygon area location to the pin
-        worker.findNearestLocation(to: tappedLocation.coordinate, areas: self.mapPolygons) {
+    }
+    
+    func findNearestLocation(to: CLLocationCoordinate2D, areas: [MapPolygon]) {
+        worker.findNearestLocation(to: tappedLocation.coordinate, areas: areas) {
             (nearestLocation, nearestSegmentCoordinates) -> Void in
             
             // Add nearest location. Place orange pin
