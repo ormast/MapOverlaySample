@@ -28,6 +28,7 @@ Research resources:
 - https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment/11172574#11172574
 - http://alienryderflex.com/polygon/
 - https://gis.stackexchange.com/questions/16414/point-in-polygon-algorithm-for-multiple-polygons
-https://wrf.ecse.rpi.edu//Research/Short_Notes/pnpoly.html
+- https://wrf.ecse.rpi.edu//Research/Short_Notes/pnpoly.html
+- https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon
 
 Developed using Xcode 9.1, iOS 10.3, swift 3.2
