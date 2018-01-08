@@ -12,6 +12,8 @@
 		6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAB20000A10001CBD66 /* Assets.xcassets */; };
 		6C53EBAF20000A10001CBD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C53EBAD20000A10001CBD66 /* LaunchScreen.storyboard */; };
 		6C950BA52000163D0087A8C4 /* KMLListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C950BA42000163D0087A8C4 /* KMLListViewController.swift */; };
+		6CBC85CA200271AE00FBE281 /* With_holes.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CBC85C9200271AE00FBE281 /* With_holes.kml */; };
+		6CBC85CE2003459700FBE281 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBC85CD2003459700FBE281 /* Algorithms.swift */; };
 		6CC293242001BEA80081AD8B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6CC293232001BEA80081AD8B /* README.md */; };
 		6CF2F9422000225500FAF27E /* MapViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF2F9412000225500FAF27E /* MapViewWorker.swift */; };
 		6CF2F9492000266700FAF27E /* Allowed_area.kml in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2F9462000266700FAF27E /* Allowed_area.kml */; };
@@ -30,6 +32,8 @@
 		6C53EBAE20000A10001CBD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C53EBB020000A10001CBD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C950BA42000163D0087A8C4 /* KMLListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMLListViewController.swift; sourceTree = "<group>"; };
+		6CBC85C9200271AE00FBE281 /* With_holes.kml */ = {isa = PBXFileReference; lastKnownFileType = text; path = With_holes.kml; sourceTree = "<group>"; };
+		6CBC85CD2003459700FBE281 /* Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		6CC293232001BEA80081AD8B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6CF2F9412000225500FAF27E /* MapViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewWorker.swift; sourceTree = "<group>"; };
 		6CF2F9462000266700FAF27E /* Allowed_area.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Allowed_area.kml; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				6C53EBA420000A10001CBD66 /* AppDelegate.swift */,
 				6CF2F9522001205100FAF27E /* Utilites.swift */,
 				6CC293232001BEA80081AD8B /* README.md */,
+				6CBC85CD2003459700FBE281 /* Algorithms.swift */,
 			);
 			path = MapOverlaysExample;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				6CF2F94C200026AC00FAF27E /* Bad_example.kml */,
 				6CF2F94B200026AC00FAF27E /* Multiple_areas.kml */,
 				6CF2F9462000266700FAF27E /* Allowed_area.kml */,
+				6CBC85C9200271AE00FBE281 /* With_holes.kml */,
 			);
 			path = kml;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				6C53EBAC20000A10001CBD66 /* Assets.xcassets in Resources */,
 				6CF2F94D200026AC00FAF27E /* Multiple_areas.kml in Resources */,
 				6CF2F94E200026AC00FAF27E /* Bad_example.kml in Resources */,
+				6CBC85CA200271AE00FBE281 /* With_holes.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 				6CF2F955200128D700FAF27E /* MapPolygon.swift in Sources */,
 				6CF2F9422000225500FAF27E /* MapViewWorker.swift in Sources */,
 				6CF2F950200026F000FAF27E /* KMLParser.swift in Sources */,
+				6CBC85CE2003459700FBE281 /* Algorithms.swift in Sources */,
 				6C950BA52000163D0087A8C4 /* KMLListViewController.swift in Sources */,
 				6C53EBA520000A10001CBD66 /* AppDelegate.swift in Sources */,
 			);
