@@ -86,12 +86,15 @@ extension MapViewWorker: MapDataProcessing {
             return
         }
         
+        let algorithmType = PathContains()
+        let algorithmProcess = Algorithm(type: algorithmType)
+        
         for area in areas {
-            let found = Algorithm.locationInRegionRayCast(location: location, area: area.areaCoordinates)
+            let found = algorithmProcess.findIfLocationIsInArea(location: location, area: area.areaCoordinates)
             if found == true {
                 if let insideArea = area.area.interiorPolygons, insideArea.count > 0 {
                     for subArea in insideArea {
-                        let foundInSubArea = Algorithm.locationInRegionRayCast(location: location, area: subArea.getCoordinatesArray())
+                        let foundInSubArea = algorithmProcess.findIfLocationIsInArea(location: location, area: subArea.getCoordinatesArray())
                         if foundInSubArea == true {
                             let subArea = MapPolygon(polygon: subArea)
                             completion(Result.insideRegionInsideSubArea(subArea))
