@@ -6,6 +6,7 @@ A sample to experiment with:
 - If the pin located outside, find the nearest location point on the overlay area perimeter and calculate the distance between
 
 For detection if a point located inside/outside area, the builtin  CGPath.contains(CGPoint) function was used.
+
 Other algorithms  are included:
 1. Ray casting, Winding Number
 
@@ -14,6 +15,8 @@ The sample provide an option to load KML data by selecting different map file in
 2. Bad example
 3. Multiple areas (to test on multiple polygon areas)
 4. With holes (Interior polygon areas)
+
+
 [ with help of KML generate tool from Google Maps API v3 Tool: http://www.birdtheme.org/useful/v3tool.html ]
 
 How to use:
